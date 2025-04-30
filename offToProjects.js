@@ -1,3 +1,3 @@
 function page1() {
-    open();
+    window.open();
 }
