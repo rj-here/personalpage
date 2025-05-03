@@ -1,3 +1,3 @@
 function page1() {
-    window.open();
+    window.open("NRR Calculator.html");
 }
