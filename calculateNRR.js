@@ -1,8 +1,8 @@
 function getNRR() {
 var output = document.getElementById("output");
 var runsScoredFor = parseInt(prompt("Input the number of runs scored by Team 1 (FOR)"));
-var oversFor = parseInt(prompt("Input the number of overs faced in full by Team 1 (FOR). If partial overs have been done (such as 47.2), then just put 47."));
-var extras = parseInt(extras);
+var oversFor = parseInt(prompt("Input the number of overs faced in full by Team 1 (FOR). If partial overs have been done (such as 47.2), then just consider 47."));
+var extras = parseInt(prompt("Extras please!"));
 var runsScoredAgainst = parseInt(prom);
 var oversAgainst = document.getElementById("oversAgainst").value;
 oversAgainst = parseInt(oversAgainst);
