@@ -39,3 +39,7 @@ a {
     margin-bottom: 3.5px;
     font-family: 'Arial', sans-serif;
 }
+background {
+    background-color: #d1faff;
+    padding: 20px;
+}
