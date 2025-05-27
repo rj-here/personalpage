@@ -1,6 +1,10 @@
-function page1() {
+function project1() {
     window.open("NRRCalculations.html");
 }
-function page2() {
+function project2() {
     window.open("BatStats.html");
+}
+
+function project3() {
+    window.open("BowlStats.html");
 }
