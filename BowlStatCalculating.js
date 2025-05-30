@@ -4,8 +4,9 @@ var runsConceded = parseInt(prompt("Input the number of runs conceded by the bow
 var wicketsTaken = parseInt(prompt("Input the number of wickets taken by the bowler"));
 var avg = (runsConceded / wicketsTaken);
 document.getElementById("bowlingAverage").innerHTML = "Bowling Average: " + avg.toFixed(2);
-output.innerHTML = "Bowling Average: " + avg;
+output.innerHTML = "Bowling Average: " + avg.toFixed(2);
 }
+
 function calculateBowlingStrikeRate() {
 var output = document.getElementById("output");
 var ballsBowled = parseInt(prompt("Input the number of balls bowled by the bowler"));
@@ -14,6 +15,7 @@ var strikeRate = (ballsBowled / wicketsTaken);
 document.getElementById("bowlingStrikeRate").innerHTML = "Bowling Strike Rate: " + strikeRate.toFixed(2);
 output.innerHTML = "Bowling Strike Rate: " + strikeRate.toFixed(2);
 }
+
 function calculateEconomyRate() {
 var output = document.getElementById("output");
 var runsConceded = parseInt(prompt("Input the number of runs conceded by the bowler"));
