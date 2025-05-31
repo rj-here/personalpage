@@ -4,7 +4,6 @@ function project1() {
 function project2() {
     window.open("BatStats.html");
 }
-
 function project3() {
     window.open("BowlStats.html");
 }
