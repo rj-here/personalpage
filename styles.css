@@ -108,3 +108,16 @@ li {
     margin-left: 10px;
     font-family: 'Arial', sans-serif;
 }
+aside {
+    background-color: rgb(180, 249, 255);
+    color: black;
+    font-size: 15px;
+    text-align: left;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'Arial', sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+}
