@@ -7,3 +7,9 @@ function lbwBatStats() {
 function lbwBowlStats() {
     window.open("https://rj-here.github.io/lbwincricket/bowlingStats.html");
 }
+function econFunDS() {
+    window.open("https://rj-here.github.io/someeconomicfun/demandAndSupply.html");
+}
+function econFunER() {
+    window.open("https://rj-here.github.io/someeconomicfun/exchangeRates.html");
+}
