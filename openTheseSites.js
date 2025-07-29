@@ -13,3 +13,7 @@ function econFunDS() {
 function econFunER() {
     window.open("https://rj-here.github.io/someeconomicfun/exchangeRates.html");
 }
+
+function menu() {
+document.getElementById('sidebar').classList.toggle('open');
+}

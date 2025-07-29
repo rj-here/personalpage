@@ -83,7 +83,6 @@ a {
     text-decoration: none;
 
 }
-
 strong {
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -95,6 +94,7 @@ button {
     text-align: center;
     margin-top: 3.5px;
     margin-bottom: 3.5px;
+   
 
     font-family: 'Arial', sans-serif;
 }
@@ -119,6 +119,71 @@ aside {
     font-style: italic;
     font-weight: bolder;
     position: fixed;
-    background-color: rgb(87, 193, 255);
     backdrop-filter: blur(10px);
+}
+/* Copilot Contributions!*/
+aside nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside nav ul li {
+    margin-bottom: 20px;
+}
+
+aside nav ul li a {
+    display: block;
+    color: #222;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+aside nav ul li a.active,
+aside nav ul li a:hover {
+    background: #0074d9;
+    color: #fff;
+}
+
+/* Hide sidebar by default */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -220px; /* Hide off-screen */
+    width: 200px;
+    height: 100vh;
+    background: rgba(25, 182, 255, 0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 0 8px rgba(0,0,0,0.05);
+    z-index: 1000;
+    transition: left 0.3s;
+    padding-top: 40px;
+}
+
+/* Show sidebar when open */
+#sidebar.open {
+    left: 0;
+}
+
+/* Always show menu button */
+#menu-toggle {
+    display: block;
+    position: fixed;
+    top: 16px;
+    left: 8px;      /* Reduced left margin */
+    z-index: 2001;
+    background: #0074d9;
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.2s;
 }
