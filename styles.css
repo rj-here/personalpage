@@ -121,7 +121,7 @@ aside {
     position: fixed;
     backdrop-filter: blur(10px);
 }
-/* Copilot Contributions!*/
+/* Copilot Contributions!
 aside nav ul {
     list-style: none;
     padding: 0;
@@ -149,12 +149,13 @@ aside nav ul li a:hover {
     background: #0074d9;
     color: #fff;
 }
-
+*/
 /* Hide sidebar by default */
+/*
 #sidebar {
     position: fixed;
     top: 0;
-    left: -220px; /* Hide off-screen */
+    left: -220px; /* Hide off-screen */ /*
     width: 200px;
     height: 100vh;
     background: rgba(25, 182, 255, 0.7);
@@ -164,18 +165,20 @@ aside nav ul li a:hover {
     transition: left 0.3s;
     padding-top: 40px;
 }
-
+*/
 /* Show sidebar when open */
+/*
 #sidebar.open {
     left: 0;
 }
-
+*/
 /* Always show menu button */
+/*
 #menu-toggle {
     display: block;
     position: fixed;
     top: 16px;
-    left: 8px;      /* Reduced left margin */
+    left: 8px;      /* Reduced left margin */ /*
     z-index: 2001;
     background: #0074d9;
     color: #fff;
@@ -187,3 +190,4 @@ aside nav ul li a:hover {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     transition: background 0.2s;
 }
+*/
