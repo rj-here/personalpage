@@ -1,0 +1,31 @@
+/*This is an alternative styling sheet, intended for a dark mode versino of my personal website.*/
+body, footer{
+background-color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: red;
+    font-family: 'Google Sans', sans-serif;
+}
+
+aside {
+    background-color: red;
+    color: rgb(18, 18, 18);
+    backdrop-filter: blur(7px);
+}
+
+p {
+    color: red;
+    font-family: 'Google Sans', sans-serif;
+}
+
+a {
+    color: white;
+    font-family: 'Google Sans', sans-serif;
+}
+
+strong {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
