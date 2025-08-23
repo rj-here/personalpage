@@ -1,4 +1,4 @@
-/*This is an alternative styling sheet, intended for a dark mode versino of my personal website.*/
+/*This is an alternative styling sheet, intended for a dark mode version of my personal website.*/
 body, footer{
 background-color: black;
 }
@@ -7,7 +7,54 @@ h1, h2, h3, h4, h5, h6 {
     color: red;
     font-family: 'Google Sans', sans-serif;
 }
-
+h1 {
+    font-size: 70px;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-decoration: underline;
+}
+h2 {
+    font-size: 50px;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;}
+h3 {
+    font-size: 43px;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+h4 {
+    font-size: 36px;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+h5 {   
+    font-size: 29px;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+h6 {
+    font-size: 22px;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
 aside {
     background-color: red;
     color: rgb(18, 18, 18);
@@ -17,15 +64,41 @@ aside {
 p {
     color: red;
     font-family: 'Google Sans', sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 a {
     color: white;
     font-family: 'Google Sans', sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 strong {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+button {
+    background-color: rgb(192, 0, 0);
+    color: white;
+    font-family: 'Google Sans', sans-serif;
+    border: 3px solid red;
+    font-size: 19px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+li {
+    color: red;
+    font-family: 'Google Sans', sans-serif;
+    font-size: 19px;
+    margin: 5px;
+    text-align: left;
+}
+
 
 
