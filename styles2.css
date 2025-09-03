@@ -64,6 +64,7 @@ aside {
 p {
     color: red;
     font-family: 'Google Sans', sans-serif;
+    font-size: 15px;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 5px;
@@ -73,6 +74,8 @@ p {
 a {
     color: white;
     font-family: 'Google Sans', sans-serif;
+    font-size: 15px;
+    text-align: left;
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -100,5 +103,29 @@ li {
     text-align: left;
 }
 
+aside nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
+aside nav ul li {
+    margin-bottom: 20px;
+}
+
+aside nav ul li a {
+    display: block;
+    color: red;
+    font-size: 13px;
+    text-decoration: none;
+    font-family: 'Google Sans', sans-serif;
+    padding: 10px 16px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+aside nav ul li a.active, aside nav ul li a:hover {
+    background-color: red;
+    color: black;
+}
 
