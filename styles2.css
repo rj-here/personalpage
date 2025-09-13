@@ -129,3 +129,21 @@ aside nav ul li a.active, aside nav ul li a:hover {
     color: black;
 }
 
+#sidebar {
+    position: fixed;
+    top: 0;
+    right: -220px; /* Hide off-screen */
+    left: auto;
+    width: 220px;
+    height: 100vh;
+    background:rgb(38, 38, 38);
+    backdrop-filter: blur (10px);
+    box-shadow: 2px 0 8px rgba(196, 0, 0, 0,5);
+    z-index: 1000;
+    transition: left 0.3s;
+    padding-top: 40px;
+}
+
+#sidebar.open {
+    right: 0;
+}
