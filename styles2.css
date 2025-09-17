@@ -5,7 +5,7 @@ background-color: black;
 
 h1, h2, h3, h4, h5, h6 {
     color: red;
-    font-family: 'Google Sans', sans-serif;
+    font-family: 'Gill Sans', sans-serif;
 }
 h1 {
     font-size: 70px;
@@ -63,7 +63,7 @@ aside {
 
 p {
     color: red;
-    font-family: 'Google Sans', sans-serif;
+    font-family: 'Gill Sans', sans-serif;
     font-size: 15px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -146,4 +146,45 @@ aside nav ul li a.active, aside nav ul li a:hover {
 
 #sidebar.open {
     right: 0;
+}
+
+#menu-toggle {
+    display: block;
+    position: fixed;
+    right: 8px; /* Less right margin*/
+    z-index: 2001;
+    background: red;
+    color: black;
+    border: none;
+    font-size: 2rem;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    transition: background 0.2s;
+}
+
+/*This is for mobile optimization! */
+@media (max-width: 800px) {
+    #sidebar {
+        width: 80vw;
+        right: -80vw; /* Hide off-screen to the right */
+        left: auto;
+        height: 100vh;
+        padding-top: 60px;
+        box-shadow: -2px 0 8px rgba(0,0,0,0.15);
+        transition: right 0.3s;
+    }
+    #sidebar.open {
+        right: 0;
+    }
+    #menu-toggle {
+        top: 16px;
+        right: 16px;
+        font-size: 2.5rem;
+        padding: 12px 18px;
+    }
+    body {
+        overflow-x: hidden;
+    }
 }
