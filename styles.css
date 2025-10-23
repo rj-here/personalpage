@@ -1,3 +1,6 @@
+/*
+General Style / Light Mode
+*/
 head {
     background-color: rgb(75, 189, 255);
 }
@@ -186,21 +189,25 @@ aside nav ul li a:hover {
     right: 0;
 }
 
-
-#menu-toggle {
-    display: block;
+#menu-toggle,
+body.dark-mode #menu-toggle {
     position: fixed;
-    right: 8px;    /* Reduced right margin */
+    top: 16px;
+    right: 16px;
+    font-size: 2.5rem;
+    padding: 12px 18px;
     z-index: 2001;
-    background: #0074d9;
-    color: #fff;
-    border: none;
-    font-size: 2rem;
-    padding: 6px 10px;
     border-radius: 6px;
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: none;
     transition: background 0.2s;
+}
+#typing-effect {
+    min-height: 3em;      /* Or set to the height of your largest text */
+    display: block;
+    /* Optionally, add a monospace font for a terminal-like effect */
+    /* font-family: monospace; */
 }
 /*This is for mobile optimization! */
 @media (max-width: 800px) {
@@ -225,4 +232,108 @@ aside nav ul li a:hover {
     body {
         overflow-x: hidden;
     }
+}
+
+/*
+Dark Mode Styles
+*/
+body.dark-mode{
+background-color: black;
+    color:rgb(137, 212, 255)
+}
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6, body.dark-mode p {
+    color:rgb(137, 212, 255)
+}
+body.dark-mode a {
+    color:rgb(137, 212, 255)
+}
+body.dark-mode button, body.dark-mode #sidebar, body.dark-mode #menu-toggle {
+    color:rgb(137, 212, 255)
+}
+body.dark-mode button {
+    background-color: rgb(0, 6, 49);
+}
+
+body.dark-mode #sidebar {
+    position: fixed;
+    top: 0;
+    right: -220px; /* Hide off-screen */
+    left: auto;
+    width: 200px;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 0 8px rgba(0,0,0,0.05);
+    z-index: 1000;
+    transition: left 0.3s;
+    padding-top: 40px;
+}
+
+body.dark-mode #sidebar.open {
+    right: 0;
+}
+
+body.dark-mode footer {
+    background-color: rgb(0, 0, 0);
+    color: rgb(137, 212, 255);
+}
+
+
+/* Profile Section Styling */
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* space between photo and text */
+  margin: 1rem 0;
+}
+
+.profile-photo {
+  width: 300px;      /* adjust as needed */
+  height: 300px;     /* adjust as needed */
+  object-fit: cover; /* keeps aspect ratio, crops if needed */
+  border-radius: 50%; /* makes the photo circular */
+  margin-left: 10px;
+}
+
+.profile-text {
+  max-width: 600px;
+}   
+
+/* AI Contributions for the Filter & Sort */
+#filter-sort-controls {
+background-color: rgb(75, 189, 255);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  max-width: 90vw;
+  transition: background 0.3s, color 0.3s;
+}
+#filter-sort-toggle {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+body.dark-mode #filter-sort-controls {
+  background: #222;
+  color: #cce6ff;
+}
+
+#filter-sort-controls select,
+#filter-sort-controls option {
+  background: #fff;
+  color: #222;
+  border-radius: 4px;
+  padding: 0.3em 0.7em;
+  margin-right: 0.5em;
+  border: 1px solid #0074d9;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode #filter-sort-controls select,
+body.dark-mode #filter-sort-controls option {
+  background: #333;
+  color: #cce6ff;
+  border: 1px solid #4fc3f7;
 }
