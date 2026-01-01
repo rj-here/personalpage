@@ -19,19 +19,8 @@ function menu() {
 document.getElementById('sidebar').classList.toggle('open');
 }
 
-//This part is for the light/dark mode toggle button
-function modeToggle() {
-    document.body.classList.toggle('dark-mode'); //To toggle the dark-mode class on the element
-    //To save the preference
-    if (document.body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark'); //Maintains dark mode
-    } else {
-        localStorage.setItem('theme', 'light'); //Maintains light mode
-    }
-}
-
 //This part is to get a typing effect on the homepage, because my friends have it, and I want it too!
-const roles = ["Software Developer", "Computer Security Student/Major", "Problem Solver", "Tech Enthusiast", "Lifelong Learner", "Cricket Viewer"]; //What I want to be typed out!
+const roles = ["Software & Web Developer", "Computer Security Major", "Problem Solver", "Tech & Cricket Enthusiast"]; //What I want to be typed out!
 const typingElement = document.getElementById("typing-effect");
 let roleIndex = 0; //This tracks the current role being typed
 let charIndex = 0; //This tracks the current character being typed
@@ -59,78 +48,72 @@ else { //If isDeleting is true, that means we are deleting characters
 }
 setTimeout(typeWriter, isDeleting ? 100 : 200); //To set a timeout for the next character to be typed or deleted, depending on whether we are typing or deleting
 }
-typeWriter(); //To start the typing effect
-// ...existing code...
-
-// Toggle filter/sort controls visibility
-function filterSort() {
-    const controls = document.getElementById('filter-sort-controls');
-    if (!controls) return;
-    controls.style.display = (controls.style.display === 'block') ? 'none' : 'block';
+//This part is for the mini announcement button on the homepage
+function miniAnnounce() {
+    alert("Hi! Nothing at the moment, but if a mini announcement comes, you click the button to know.")
 }
-
-// Filtering
-function filterProjects() {
-    const lang = document.getElementById('filter-language')?.value || 'all-lang';
-    const category = document.getElementById('filter-category')?.value || 'all-type';
-    const people = document.getElementById('filter-people')?.value || 'all-ppl';
-    const year = document.getElementById('filter-year')?.value || 'all-years';
-    const hack = document.getElementById('filter-hackathon')?.value || 'all-hackathons';
-
-    const projects = document.querySelectorAll('#projects-list .project');
-    projects.forEach(proj => {
-        const okLang = (lang === 'all-lang' || proj.dataset.language === lang);
-        const okCat = (category === 'all-type' || proj.dataset.category === category);
-        const okPpl = (people === 'all-ppl' || proj.dataset.people === people);
-        const okYear = (year === 'all-years' || proj.dataset.year === year);
-        const okHack = (hack === 'all-hackathons' || proj.dataset.hackathon === hack);
-
-        proj.style.display = (okLang && okCat && okPpl && okYear && okHack) ? '' : 'none';
-    });
-}
-
-// Sorting (reorders DOM children)
-function sortProjects() {
-    const sortVal = document.getElementById('sort-options')?.value;
-    const list = document.getElementById('projects-list');
-    if (!list || !sortVal) return;
-
-    const items = Array.from(list.querySelectorAll('.project'));
-
-    let sorted = items.slice();
-    if (sortVal === 'title-asc') {
-        sorted.sort((a,b) => (a.dataset.title || '').localeCompare(b.dataset.title || ''));
-    } else if (sortVal === 'title-desc') {
-        sorted.sort((a,b) => (b.dataset.title || '').localeCompare(a.dataset.title || ''));
-    } else if (sortVal === 'new-first') {
-        sorted.sort((a,b) => Number(b.dataset.year || 0) - Number(a.dataset.year || 0));
-    } else if (sortVal === 'old-first') {
-        sorted.sort((a,b) => Number(a.dataset.year || 0) - Number(b.dataset.year || 0));
-    } else if (sortVal === 'lang-asc') {
-        sorted.sort((a,b) => (a.dataset.language || '').localeCompare(b.dataset.language || ''));
-    } else if (sortVal === 'lang-desc') {
-        sorted.sort((a,b) => (b.dataset.language || '').localeCompare(a.dataset.language || ''));
-    } else if (sortVal === 'category-asc') {
-        sorted.sort((a,b) => (a.dataset.category || '').localeCompare(b.dataset.category || ''));
-    } else if (sortVal === 'category-desc') {
-        sorted.sort((a,b) => (b.dataset.category || '').localeCompare(a.dataset.category || ''));
+//This part is for the light/dark mode toggle button
+function modeToggle() {
+    document.body.classList.toggle('dark-mode'); //To toggle the dark-mode class on the element
+    //To save the preference
+    if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark'); //Maintains dark mode
+    } else {
+        localStorage.setItem('theme', 'light'); //Maintains light mode
     }
+}
+typeWriter(); //To start the typing effect
+//This will be for sorting & filtering projects
+function filterAndSort() {
+    // Getting all the projects together
+    const projects = document.querySelectorAll('.project-card');
 
-    // append in new order
-    sorted.forEach(node => list.appendChild(node));
+    // Changes in the filter dropdowns
+    const languageFilter = document.getElementById('filter-language').value; //language filter
+    const yearFilter = document.getElementById('filter-year').value; //year filter
+    const peopleFilter = document.getElementById('filter-people').value; //people filter
+    const hackathonFilter = document.getElementById('filter-hackathon').value; //hackathon filter
+    const categoryFilter = document.getElementById('filter-category').value; //category filter
+    // Changes in the sort dropdown
+    const sortOption = document.getElementById('sort').value;
+
+    console.log("Filters:", { languageFilter, yearFilter, peopleFilter, hackathonFilter, categoryFilter });
+
+    // Filter projects based on dropdown values
+    const filteredProjects = Array.from(projects).filter(project => {
+        const matchesLanguage = languageFilter === 'all' || project.dataset.language === languageFilter;
+        const matchesYear = yearFilter === 'all' || project.dataset.year === yearFilter;
+        const matchesPeople = peopleFilter === 'all' || project.dataset.people === peopleFilter;
+        const matchesHackathon = hackathonFilter === 'all' || project.dataset.hackathon === hackathonFilter;
+        const matchesCategory = categoryFilter === 'all' || project.dataset.category === categoryFilter;
+
+        return matchesLanguage && matchesYear && matchesPeople && matchesHackathon && matchesCategory;
+    });
+
+    console.log("Filtered Projects:", filteredProjects);
+
+    // Sort projects based on the selected option
+    const sortedProjects = filteredProjects.sort((a, b) => {
+        if (sortOption === 'title') {
+            return a.dataset.title.localeCompare(b.dataset.title);
+        } else if (sortOption === 'year') {
+            return b.dataset.year - a.dataset.year;
+        } else if (sortOption === 'none') {
+            return 0; // No sorting, keep the original order
+        }
+    });
+
+    console.log("Sorted Projects:", sortedProjects);
+
+    // Clear the container and append the filtered and sorted projects
+    const projectContainer = document.querySelector('.projects-container');
+    projectContainer.innerHTML = ''; // Clear the container
+
+    if (sortedProjects.length === 0) {
+        projectContainer.innerHTML = '<p>No projects match the selected criteria.</p>'; // Show a message if no projects match
+    } else {
+        sortedProjects.forEach(project => projectContainer.appendChild(project)); // Add sorted projects
+    }
 }
 
-// Attach event listeners after DOM is ready (defer script ensures this)
-(function attachFilters() {
-    const ids = ['filter-language','filter-category','filter-people','filter-year','filter-hackathon'];
-    ids.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.addEventListener('change', () => { filterProjects(); sortProjects(); });
-    });
-    const sortEl = document.getElementById('sort-options');
-    if (sortEl) sortEl.addEventListener('change', () => sortProjects());
 
-    // initial apply
-    filterProjects();
-    sortProjects();
-})();

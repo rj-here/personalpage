@@ -6,184 +6,207 @@
     <script src="siteScript.js"></script>
 </head>
 <body>
-
- <button id="menu-toggle" onclick="menu()">&#9776</button><aside id="sidebar">
+ <button id="menu-toggle" onclick="menu()">&#9776</button>
+ <aside id="sidebar">
         <nav>
             <ul>
                 <li><a href="index.html">Homepage</a></li>
+                <li><a href="experience.html">Experience</a></li>
                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="interests.html">Interests</a></li>
                 <li><a href="contactMe.html">Get In Touch</a></li>
             </ul>
         </nav>
     </aside>
- <!--   <button id="mode-toggle" aria-label="Toggle light/dark mode" onclick="modeToggle()">Mode Toggle</button> -->
     <h1>Rishi</h1>
     <h2>Projects</h2>
-    <p>Here, you will find all my (completed) projects, either independently or in collaboration with others.</p>
-<!--    <button id="filter-sort-toggle" aria-label="Show/Hide filter and sort options" onclick="filterSort()">Filter & Sort</button>
-    <div id="filter-sort-controls">--> <!--This filters & sorts my projects in the ways I wish--> 
-        <!--Filters-->
-<!--        <select id="filter-language">
-            <option value="all-lang">All</option>
+    <p>Here, you'll find all my projects.</p>
+    <!--Controls to filter & sort projects-->
+   <!-- <div class="controls"> -->
+        <!--Filter by Language-->
+     <!--   <select name="language" id="filter-language" onchange="filterAndSort()">
+            <option value="all">ALL</option>
             <option value="python">Python</option>
-            <option value="java">Java</option>
             <option value="c">C</option>
             <option value="javascript">JavaScript</option>
-        </select>
-        <select id="filter-category">
-            <option value="all-type">All</option>
-            <option value="utility">Utilities</option>
-            <option value="uni">University Learnings</option>
-            <option value="game">Games</option>
-            <option value="cricket">Cricket</option>
-            <option value="hack">Hackathons</option>
-        </select>
-        <select id="filter-people">
-            <option value="all-ppl">All</option>
-            <option value="solo">Independently</option>
-            <option value="collab">Collaborations</option>
-        </select>
-        <select id="filter-year">
-            <option value="all-years">All</option>
-            <option value="2024">2024</option>
-            <option value="2025">2025</option>
+            <option value="java">Java</option>
+        </select>-->
+        <!--Filter by Year-->
+       <!-- <select name="year" id="filter-year" onchange="filterAndSort()">
+            <option value="all">ALL</option>
             <option value="2026">2026</option>
+            <option value="2025">2025</option>
+            <option value="2024">2024</option>
+        </select> -->
+        <!--Filter by People (solo or team)-->
+      <!--  <select name="people" id="filter-people" onchange="filterAndSort()">
+            <option value="all">ALL</option>
+            <option value="solo">Solo</option>
+            <option value="team">Team</option>
+        </select> -->
+        <!--Filter by Hackathon-->
+   <!--     <select name="hackathon" id="filter-hackathon" onchange="filterAndSort()">
+            <option value="all">ALL</option>
+            <option value="devopsgenainov2025">DevOps Gen AI Hackathon Missisauga | November 2025</option>
         </select>
-        <select id="filter-hackathon">
-            <option value="all-hackathons">All</option>
-            <option value="none">None</option>
-            <option value="hack1">Hackathon 1</option>
+        <!--Filter by Category (Utility, Game, etc.)-->
+     <!--   <select name="category" id="filter-category" onchange="filterAndSort()">
+            <option value="all">ALL</option>
+            <option value="utility">Utility</option>
+            <option value="uni">University</option>
+            <option value="game">Game</option>
+            <option value="cricket">Cricket</option>
         </select> -->
-        <!--Sorts-->
-   <!--     <select id="sort-options">
-            <option value="title-asc">Title (A-Z)</option>
-            <option value="title-desc">Title (Z-A)</option>
-            <option value="new-first">Latest</option>
-            <option value="old-first">Oldest</option>
-            <option value="lang-asc">Language (A-Z)</option>
-            <option value="lang-desc">Language (Z-A)</option>
-            <option value="category-asc">Category (A-Z)</option>
-            <option value="category-desc">Category (Z-A)</option>
-        </select> -->
+        <!--Sort-->
+     <!--   <select id="sort" onchange="filterAndSort()">
+            <option value="none">No Sort</option>
+            <option value="title">Sort by Title</option>
+            <option value="year">Sort by Year</option>
+        </select>-->
+
+        
     </div>
-    <div id="projects-list">
-        <div class="project" data-language="python" data-category="utility" data-year="2025" data-people="solo" data-hackathon="none" data-title="Trip Planner: Python">
-        <a href="https://github.com/rj-here/pythonpyramid/blob/main/TripPlanner.py">Trip Planner: Python</a>
-        <p>
-        This will link you to the Python file, in which I made a basic trip planner. It's unconventional as it takes more of a spin from a personal Notion template, but I added budget in this as well. It asks some simple questions regarding length of trip, the budget of yours, the people accompanying, and also the location. This is part of <a href="https://github.com/rj-here/pythonpyramid/">my Python repository</a>, in which I am growing out a collection of Python programs.
-        </p>
+    <!--Projects Container-->
+    <div class="projects-container">
+        <div class="project-card" data-language="python" data-year="2025" data-category="utility" data-people="solo" data-hackathon="none" data-title="Trip Planner">
+        <h3>Trip Planner</h3>
+        <p><strong>Language:</strong> Python</p>
+        <p>A simple trip planner, based on my personal Notion template for planning trips. It asks simple questions such as the trip's length, budget, and the people accompanying. It formulated the start of my Python pyramid.</p>
+        <a href="https://github.com/rj-here/pythonpyramid/blob/main/TripPlanner.py">Check it out!</a>
+        <p><strong>Category:</strong> Utility</p>
         </div>
 
-        <div class="project" data-language="python" data-category="utility" data-year="2025" data-people="solo" data-hackathon="none" data-title="Weekend Planner: Python">
-        <a href="https://github.com/rj-here/pythonpyramid/blob/main/WeekendPlanner.py">Weekend Planner: Python</a>
-        <p>
-        This takes you to the Python file, in which I created a simple weekend planner. Answer some questions about weekend plans, including regular, and occasional tasks, in addition to special things like eating out for dinner. This also is part of the Python pyramid that I'm building.
-        </p>
+        <div class="project-card" data-language="python" data-year="2025" data-category="utility" data-people="solo" data-hackathon="none" data-title="Weekend Planner">
+        <h3>Weekend Planner</h3>
+        <p><strong>Language:</strong> Python</p>
+        <p>A simple weekend planner, was another idea that struck my mind. It asks simple questions such as the regular tasks, occasional tasks, and special things like a dinner out.</p>
+        <a href="https://github.com/rj-here/pythonpyramid/blob/main/WeekendPlanner.py">Check it out!</a>
+        <p><strong>Category:</strong> Utility</p>
         </div>
 
-        <div class="project" data-language="python" data-category="utility" data-year="2025" data-people="solo" data-hackathon="none" data-title="Temperature Convertor: Python">
-        <a href="https://github.com/rj-here/pythonpyramid/blob/main/TemperatureConvertor.py">Temperature Convertor: Python</a>
-        <p>
-        This is a simple Python file, in which I created a temperature convertor. I just thought of it while watching YouTube, and hearing the mention of 100 degrees, wondering why is it so hot, for it to then click to me that it is a content creator in the US, and they speak in Fahrenheit. Another addition to my Python pyramid.
-        </p>
-        </div>
-        <div class="project" data-language="c" data-category="utility" data-year="2025" data-people="solo" data-hackathon="none" data-title="Calculator: C">
-        <a href="https://github.com/rj-here/cforyourself/blob/main/calculator.c">Calculator: C</a>
-        <p>
-        I (finally!), got a "more-than-basic" calculator running as a C file. This also is a terminal file, as is the case with most projects (as of now). This is part of my growing <a href="https://github.com/rj-here/cforyourself">collection of programs in C</a>.
-        </p>
+        <div class="project-card" data-language="python" data-year="2025" data-category="utility" data-people="solo" data-hackathon="none" data-title="Temperature Convertor">
+        <h3>Temperature Convertor</h3>
+        <p><strong>Language:</strong> Python</p>
+        <p>A simple temperature convertor, which converts between Celsius & Fahrenheit. The inspiration behind it was me randomly watching a YouTube video, and surprised to hear 100 degrees, for it to then register that the creator is American, and they speak in Fahrenheit.</p>
+        <a href="https://github.com/rj-here/pythonpyramid/blob/main/TemperatureConvertor.py">Check it out!</a>
+        <p><strong>Category:</strong> Utility</p>
         </div>
 
-        <div class="project" data-language="javascript" data-category="uni" data-year="2025" data-people="solo" data-hackathon="none" data-title="Some Economic Fun: JavaScript">
-        <a href="https://rj-here.github.io/someeconomicfun/">Some Economic Fun: JavaScript</a>
-        <p>
-        This simple site contains a few mini programs containing an application of some concepts I learned in introduction to microeconomics (ECON 1000), and macroeconomics (ECON 1010), at York University.
-        <br>
-        The books for them are MicroEconomics for Life: Third Edition & MacroEconomics for Life: Third Edition, both by Avi J. Cohen & Scott A. Walla
-        <br>
-        Click below to directly access them.
-        <br>
-        <button onclick="econFunDS()">Demand & Supply</button>
-        <br>
-        <button onclick="econFunER()">Exchange Rates</button>
-        </p>
+        <div class="project-card" data-language="c" data-year="2025" data-category="utility" data-people="solo" data-hackathon="none" data-title="Calculator">
+        <h3>Calculator</h3>
+        <p><strong>Language:</strong> C</p>
+        <p>A simple calculator, which performs basic arithmetic operations. It was my first C program, and I built it to reiterate the fundamentals of C programming.</p>
+        <a href="https://github.com/rj-here/cforyourself/blob/main/Calculator.c">Check it out!</a>
+        <p><strong>Category:</strong> Utility</p>
         </div>
 
-        <div class="project" data-language="javascript" data-category="uni" data-year="2025" data-people="solo" data-hackathon="none" data-title="Should You or Should You Not?: JavaScript">
-         <a href="https://rj-here.github.io/shouldyoushouldyounot/">Should You or Should You Not?: JavaScript</a>
-        <p>
-        With this site, I created a simple tool to assist in making decisons. It will ask what you want to decide, and then take value of points for and against it. This slightly is inspired from the concept of utilitarianism from philospohy, something I learned in introduction to ethics (PHIL 2070) & introduction to applied ethics (PHIL 2075).
-        <br>
-        The books for them are Everyday Ethics by Brian Huss, and Applied Ethics: An Impartial Introduction by Elizabeth Jackson, Tyron Goldscmidt, Dustin Crummett, and Rebecca Chan.
+        <div class="project-card" data-language="javascript" data-year="2025" data-category="uni" data-people="solo" data-hackathon="none" data-title="Some Economic Fun">
+        <h3>Some Economic Fun</h3>
+        <p><strong>Language:</strong> JavaScript</p>
+        <p>I was keen to further enhance my understanding of prevoiusly learned web development fundamentals in the form of JavaScript, CSS & HTML. I wanted to explore a slightly different approach and aesthetic, as well as try and apply my learnings from my classes introducing microeconomics and macroeconomics.
+        The books for them are MicroEconomics for Life: Third Edition & MacroEconomics for Life: Third Edition, both by Avi J. Cohen & Scott A. Walla.
         </p>
+        <a href="https://rj-here.github.io/someeconomicfun/">Check it out!</a>
+        <p><strong>Category:</strong> University Concepts</p>
         </div>
 
-        <div class="project" data-language="java" data-category="game" data-year="2024" data-people="solo" data-hackathon="none" data-title="Snakes & Ladders: Java">
-        <a href="https://github.com/rj-here/javajungle/blob/main/rCodes/src/projects2025/SnakesAndLadders.java">Snakes & Ladders: Java</a>
-        <p>
-        This links you to the Java file, in which I recreated my personal Snakes & Ladders board, with some hard coding dependent on the position of the player, and a bit of tweaks to how I have played, where 3 rolls of 6 is unlucky. This was already made before, but I brought it into my GitHub repository consisting of <a href="https://github.com/rj-here/javajungle">all my Java programs,</a> and added comments & tweaks for everyone's convenience.
+        <div class="project-card" data-language="javascript" data-year="2025" data-category="uni" data-people="solo" data-hackathon="none" data-title="Should You or Should You Not?">
+        <h3>Should You or Should You Not?</h3>
+        <p><strong>Language:</strong> JavaScript</p>
+        <p>A simple tool to help you make decisions, based on the points you have for and against making it. It is partly inspired from the concept of utilitarianism, which I learned in my ethics (philospohy) classes, PHIL 2070 & 2075.
+        The books for them are Everyday Ethics by Brian Huss, and Applied Ethics: An Impartial Introduction by Elizabeth Jackson, Tyron Goldscmidt, Dustin Crummett, and Rebecca Chan.    
         </p>
+        <a href="https://rj-here.github.io/shouldyoushouldyounot/">Check it out!</a>
+        <p><strong>Category:</strong> University Concepts</p>
         </div>
 
-    <!--    <div class="project" data-language="javascript" data-category="cricket" data-year="2025" data-people="solo" data-hackathon="none" data-title="LBW - Little Bit Wiser in Cricket">
-        <a href="https://rj-here.github.io/lbwincricket/">LBW - Little Bit Wiser in Cricket</a>
-        <p>
-        It is a simple site containing some basic calculations for you to do in the sport of cricket.
-        <br>
-        Click the buttons below to directly access the calculation(s) you want.
-        <br>
-        <button onclick="lbwNRR()">Net Run Rate</button>
-        <br>
-        <button onclick="lbwBatStats()">Batting Statistics</button>
-        <br>
-        <button onclick="lbwBowlStats()">Bowling Statistics</button>
-        </p>
-        </div>
--->
-        <div class="project" data-language="java" data-category="cricket" data-year="2024" data-people="solo" data-hackathon="none" data-title="T20 World Cup Quiz: Java">
-        <a href="https://github.com/rj-here/javajungle/blob/main/rCodes/src/projects2025/T20WCQuiz.java">T20 World Cup Quiz: Java</a>
-        <p>
-        This links you to the Java file, in which I created a simple quiz game, based on the ICC Women's and Men's T20 World Cups. The questions are about the host venues, winners, player of the tournament, player of the final.
-        <br>
-        I've hard coded the details in different methods, to keep a bit of clarity, and not make my code super messy. I already had the file, just added comments and brought it into the GitHub repository.    
-        </p>
+        <div class="project-card" data-language="java" data-year="2024" data-category="game" data-people="solo" data-hackathon="none" data-title="Snakes & Ladders">
+        <h3>Snakes & Ladders</h3>
+        <p><strong>Language:</strong> Java</p>
+        <p>My first real "project". I made a simple Snakes & Ladders implementation, using Java. It is based off a personal board I have, and coded in a manner that considers the playing style I've grown up with.</p>
+        <a href="https://github.com/rj-here/javajungle/blob/main/rCodes/src/projects2025/SnakesAndLadders.java">Check it out!</a>
+        <p><strong>Category:</strong> Games</p>
         </div>
 
-        <div class="project" data-language="java" data-category="cricket" data-year="2025" data-people="solo" data-hackathon="none" data-title="NRR: Java">
-        <a href="https://github.com/rj-here/javajungle/blob/main/rCodes/src/projects2025/NRR.java">NRR: Java</a>
-        <p>
-        This links you to the Java file, which is where I first cracked how to calculate net run rate. Like the project above, and subsequent ones, I had the file from before and just brought it into the directory.
-        </p>
+        <div class="project-card" data-language="javascript" data-year="2025" data-category="cricket" data-people="solo" data-hackathon="none" data-title="LBW - Little Bit Wiser in Cricket">
+        <h3>LBW - Little Bit Wiser in Cricket</h3>
+        <p><strong>Language:</strong> JavaScript</p>
+        <p>A simple website involving some basic calculations related to cricket, for bowlers & batters. And, you can also get net run rate, a metric useful in tournament performance evaluation.</p>
+        <a href="https://rj-here.github.io/lbwincricket/">Check it out!</a>
+        <p><strong>Category:</strong> Cricket</p>
         </div>
 
-     <!--   <div class="project" data-language="java" data-category="cricket" data-year="2025" data-people="solo" data-hackathon="none" data-title="DLS Calculator: Java">
-        <a href="https://github.com/rj-here/javajungle/blob/main/rCodes/src/projects2025/DLS.java">DLS Calculator: Java</a>
-        <p>
-        This takes you to the Java file, where I (finally!) created a tool to determine the scores for the chasing team in rain-affected matches of cricket. This was mostly done before hand with fixes and touches done in the directory. This was a tougher project to do just due to the sheer involvement of numbers for this one, but I come out of completing this with immense satistfaction. Credit where due to GitHub Copilot!           
-        </p>
+        <div class="project-card" data-language="java" data-year="2024" data-category="cricket" data-people="solo" data-hackathon="none" data-title="T20 World Cup Quiz">
+        <h3>T20 World Cup Quiz</h3>
+        <p><strong>Language:</strong> Java</p>
+        <p>Another of my first few projects, this was a simple quiz game regarding some simple details of the T20 World Cup (previously known as World T20). It covers all editions from the inaugral to the most recent (2024) editions, with an update soon for the 2026 editions as they take place.</p>
+        <a href="https://github.com/rj-here/javajungle/blob/main/rCodes/src/projects2025/T20WCQuiz.java">Check it out!</a>
+        <p><strong>Category:</strong> Cricket</p>
         </div>
--->
-        <div class="project" data-language="java" data-category="cricket" data-year="2025" data-people="solo" data-hackathon="none" data-title="A big points database for all ICC tournaments: Java">
-        <a href="https://github.com/rj-here/javajungle/blob/main/rCodes/src/projects2025/ICC.java">A big points database for all ICC tournaments: Java</a>
-        <p>
-        This links to the Java file, considering all the big points (winners, runners-up, player of the tournament, player of the final) for all ICC tournaments conducted so far, so the ICC Women's & Men's Cricket World Cup (2025 women's edition ongoing), T20 World Cups (2026 editions under a year away), Champions Trophy (first women's T20 edition from 2027), and the World Test Championship for the men (2025-27 cycle ongoing).
+
+        <div class="project-card" data-language="java" data-year="2025" data-category="cricket" data-people="solo" data-hackathon="none" data-title="Net Run Rate Calculator">
+        <h3>Net Run Rate Calculator</h3>
+        <p><strong>Language:</strong> Java</p>
+        <p>A simple tool to calculate net run rate in cricket, based on the runs scored and overs faced by a team. I had first cracked it here, and then implemented it in LBW.</p>
+        <a href="https://github.com/rj-here/javajungle/blob/main/rCodes/src/projects2025/NRR.java">Check it out!</a>
+        <p><strong>Category:</strong> Cricket</p>
+        </div>
+
+        <div class="project-card" data-language="java" data-year="2025" data-category="cricket" data-people="solo" data-hackathon="none" data-title="DLS Calculator">
+        <h3>DLS Calculator</h3>
+        <p><strong>Language:</strong> Java</p>
+        <p>This takes you to the Java file, where I (finally!) created a tool to determine the scores for the chasing team in rain-affected matches of cricket. This was mostly done before hand with fixes and touches done in the directory. This was a tougher project to do just due to the sheer involvement of numbers for this one, but I come out of completing this with immense satisfaction. Credit where due to GitHub Copilot!
+        One case is hidden due to computational errors which I cannot seem to figure out the issue of.
+        </p>
+        <a href="https://github.com/rj-here/javajungle/blob/main/rCodes/src/projects2025/DLS.java">Check it out!</a>
+        <p><strong>Category:</strong> Cricket</p>
+        </div>
+
+        <div class="project-card" data-language="java" data-year="2025" data-category="cricket" data-people="solo" data-hackathon="none" data-title="ICC Tournament Points Database">
+        <h3>ICC Tournament Points Database</h3>
+        <p><strong>Language:</strong> Java</p>
+        <p>This links to the Java file, considering all the big points (winners, runners-up, player of the tournament, player of the final) for all (senior) ICC tournaments conducted so far, so the ICC Women's & Men's Cricket World Cup, T20 World Cup (2026 editions under a year away), Champions Trophy (first women's T20 edition from 2027), and the World Test Championship for the men (2025-27 cycle ongoing).
         A fun, yet demanding project, but I am glad to have it done. Lots of Wikipedia pages & ESPNCricinfo scorecards were referenced to get details correct (which I've tried to go over multiple times), and quite a bit of patience was the ask of the task.
-        Again, credit where due to GitHub Copilot. It was most recently updated with the ICC Women's Cricket World Cup 2025 details.
+        Again, credit where due to GitHub Copilot. Up next, the T20 World Cups of 2026!
         </p>
+        <a href="https://github.com/rj-here/javajungle/blob/main/rCodes/src/projects2025/ICC.java">Check it out!</a>
+        <p><strong>Category:</strong> Cricket</p>
         </div>
 
-        <div class="project" data-language="python" data-category="cricket" data-year="2025" data-people="solo" data-hackathon="none" data-title="Playing XI in Cricket: Python">
-        <a href="https://github.com/rj-here/pythonpyramid/blob/main/PlayingXICricket.py">Playing XI in Cricket: Python</a>
-        <p>
-        This will take you to the Python file, in which I created a simple terminal program to input your playing XI for a cricket match, where you assign roles (batter, bowler, allrounders, wicketkeepers), in addition to appointing your captain and vice-captain.
-        </p>
+        <div class="project-card" data-language="python" data-year="2025" data-category="cricket" data-people="solo" data-hackathon="none" data-title="Playing XI">
+        <h3>Playing XI</h3>
+        <p><strong>Language:</strong> Python</p>
+        <p>A simple terminal program to provide a playing XI for a cricket match, assigning the roles & leadership.</p>
+        <a href="https://github.com/rj-here/pythonpyramid/blob/main/PlayingXICricket.py">Check it out!</a>
+        <p><strong>Category:</strong> Cricket</p>
         </div>
 
+        <div class="project-card" data-language="python" data-year="2025" data-category="utility" data-people="team" data-hackathon="devopsgenainov2025" data-title="Code Rush">
+        <h3>Code Rush</h3>
+        <p><strong>Language:</strong> Python</p>
+        <p>A tool that would analyze a GitHub repository, and provide the main details such as owner, contributors, tech stack, purpose, and more.</p>
+        <a href="https://github.com/suraj9581/Code-Rush">Check it out!</a>
+        <p><strong>Category:</strong> Utility</p>
+        <p><strong>Collaborator(s):</strong> Ranjana ma'am, Surya sir, Ramchandran sir</p>
+        <p><strong>Hackathon:</strong> DevOps GenAI Hackathon Missisauga</p>
+        </div>
+
+        <!--
+        <div class="project-card" data-language="" data-year="" data-category="" data-people="" data-hackathon="" data-title="">
+        <h3>Template (Name)</h3>
+        <p><strong>Language:</strong></p>
+        <p>Description of the project.</p>
+        <a href="#">Check it out!</a>
+        <p><strong>Category:</strong></p>
+        <p><strong>Collaborator(s):</strong></p>
+        <p><strong>Hackathon:</strong></p>
+        </div>
+        -->
     </div>
 
 </body>
 
 <footer>
     <p>© 2025 Rishi</p>
-    <p>Last updated: 29th November, 2025</p>
+    <p>Last updated: 1st January, 2026</p>
 </footer>
