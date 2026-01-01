@@ -62,6 +62,7 @@ function modeToggle() {
         localStorage.setItem('theme', 'light'); //Maintains light mode
     }
 }
+miniAnnounce(); //To call the mini announcement function on page load
 typeWriter(); //To start the typing effect
 //This will be for sorting & filtering projects
 function filterAndSort() {
