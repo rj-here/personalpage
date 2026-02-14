@@ -48,10 +48,6 @@ else { //If isDeleting is true, that means we are deleting characters
 }
 setTimeout(typeWriter, isDeleting ? 100 : 200); //To set a timeout for the next character to be typed or deleted, depending on whether we are typing or deleting
 }
-//This part is for the mini announcement button on the homepage
-function miniAnnounce() {
-    alert("Hi! Nothing at the moment, but if a mini announcement comes, you click the button to know.")
-}
 //This part is for the light/dark mode toggle button
 function modeToggle() {
     document.body.classList.toggle('dark-mode'); //To toggle the dark-mode class on the element
