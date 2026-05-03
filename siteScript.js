@@ -16,7 +16,19 @@ function econFunER() {
 }
 //This part is for eventual sidebar navigation functionality
 function menu() {
-document.getElementById('sidebar').classList.toggle('open');
+    const sidebar = document.getElementById('sidebar');
+    if (sidebar) {
+        // Toggle the 'open' class
+        if (sidebar.classList.contains('open')) {
+            sidebar.classList.remove('open');
+        } else {
+            sidebar.classList.add('open');
+        }
+        // Debugging log for Safari
+        console.log('Sidebar class list:', sidebar.classList);
+    } else {
+        console.error('Sidebar element not found');
+    }
 }
 
 //This part is to get a typing effect on the homepage, because my friends have it, and I want it too!
