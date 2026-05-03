@@ -70,6 +70,7 @@ function filterAndSort() {
     const peopleFilter = document.getElementById('filter-people').value; //people filter
     const hackathonFilter = document.getElementById('filter-hackathon').value; //hackathon filter
     const categoryFilter = document.getElementById('filter-category').value; //category filter
+    const frameworkFilter = document.getElementById('filter-framework'.value); //framework filter
     // Changes in the sort dropdown
     const sortOption = document.getElementById('sort').value;
 
@@ -82,8 +83,8 @@ function filterAndSort() {
         const matchesPeople = peopleFilter === 'all' || project.dataset.people === peopleFilter;
         const matchesHackathon = hackathonFilter === 'all' || project.dataset.hackathon === hackathonFilter;
         const matchesCategory = categoryFilter === 'all' || project.dataset.category === categoryFilter;
-
-        return matchesLanguage && matchesYear && matchesPeople && matchesHackathon && matchesCategory;
+        const matchesFramework == frameworkFilter == 'all' || project.dataset.category == frameworkFilter;
+        return matchesLanguage && matchesYear && matchesPeople && matchesHackathon && matchesCategory && matchesFramework;
     });
 
     console.log("Filtered Projects:", filteredProjects);
