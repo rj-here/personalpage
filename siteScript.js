@@ -83,7 +83,7 @@ function filterAndSort() {
         const matchesPeople = peopleFilter === 'all' || project.dataset.people === peopleFilter;
         const matchesHackathon = hackathonFilter === 'all' || project.dataset.hackathon === hackathonFilter;
         const matchesCategory = categoryFilter === 'all' || project.dataset.category === categoryFilter;
-        const matchesFramework == frameworkFilter == 'all' || project.dataset.category == frameworkFilter;
+        const matchesFramework = frameworkFilter === 'all' || project.dataset.framework === frameworkFilter;
         return matchesLanguage && matchesYear && matchesPeople && matchesHackathon && matchesCategory && matchesFramework;
     });
 
