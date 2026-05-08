@@ -13,7 +13,6 @@
                 <li><a href="index.html">Homepage</a></li>
                 <li><a href="experience.html">Experience</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="interests.html">Interests</a></li>
                 <li><a href="contactMe.html">Get In Touch</a></li>
             </ul>
         </nav>
@@ -25,31 +24,32 @@
     <!--Controls to filter & sort projects-->
    <div class="controls">
         <!--Filter by Language-->
-   <select name="language" id="filter-language" onchange="filterAndSort()">
+    <select name="language" id="filter-language" onchange="filterAndSort()">
             <option value="all">ALL</option>
             <option value="python">Python</option>
             <option value="c">C</option>
             <option value="javascript">JavaScript</option>
             <option value="java">Java</option>
             <option value="markdown">Markdown</option>
-        </select>
+    </select>
         <!--Filter by Year-->
     <select name="year" id="filter-year" onchange="filterAndSort()">
             <option value="all">ALL</option>
             <option value="2026">2026</option>
             <option value="2025">2025</option>
             <option value="2024">2024</option>
-        </select>
+    </select>
         <!--Filter by People (solo or team)-->
     <select name="people" id="filter-people" onchange="filterAndSort()">
             <option value="all">ALL</option>
             <option value="solo">Solo</option>
             <option value="team">Team</option>
-        </select>
+    </select>
     <select name="hackathon" id="filter-hackathon" onchange="filterAndSort()">
             <option value="all">ALL</option>
-            <option value="devopsgenainov2025">DevOps Gen AI Hackathon Missisauga | November 2025</option>
-        </select>
+            <option value="devops-genai-nov2025">DevOps Gen AI Hackathon Missisauga | November 2025</option>
+            <option value="ibmzsheridan-may2026">IBM Z Sheridan Hackathon | May 2026</option>
+    </select>
         <!--Filter by Category (Utility, Game, etc.)-->
     <select name="category" id="filter-category" onchange="filterAndSort()">
             <option value="all">ALL</option>
@@ -57,217 +57,24 @@
             <option value="uni">University</option>
             <option value="game">Game</option>
             <option value="cricket">Cricket</option>
-        </select>
+    </select>
+    <select name="framework" id="filter-framework" onchange="filterAndSort()">
+        <option value="all">ALL</option>
+        <option value="react">React</option>
+        <option value="none">None</option>
+    </select>
         <!--Sort-->
     <select id="sort" onchange="filterAndSort()">
             <option value="none">No Sort</option>
             <option value="title">Sort by Title</option>
             <option value="year">Sort by Year</option>
-        </select>
-
-        
+    </select>        
     </div>
 
     <!--Projects Container-->
     <div class="projects-container">
-        <div class="project-card" data-language="python" data-framework="none" data-year="2025" data-category="utility" data-people="solo" data-hackathon="none" data-title="Trip Planner">
-        <h3>Trip Planner</h3>
-        <p><strong>Language:</strong> Python</p>
-        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot</p>
-        <p><strong>Frameworks:</strong></p>
-        <p>A simple trip planner, based on my personal Notion template for planning trips. It asks simple questions such as the trip's length, budget, and the people accompanying. It formulated the start of my Python pyramid.</p>
-        <a href="https://github.com/rj-here/tripPlanner">Check it out!</a>
-        <p><strong>Category:</strong> Utility</p>
-        </div>
-
-        <div class="project-card" data-language="python" data-framework="none" data-year="2025" data-category="utility" data-people="solo" data-hackathon="none" data-title="Weekend Planner">
-        <h3>Weekend Planner</h3>
-        <p><strong>Language:</strong> Python</p>
-        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot</p>
-        <p><strong>Frameworks:</strong></p>
-        <p>A simple weekend planner, was another idea that struck my mind. It asks simple questions such as the regular tasks, occasional tasks, and special things like a dinner out.</p>
-        <a href="https://github.com/rj-here/weekendPlanner">Check it out!</a>
-        <p><strong>Category:</strong> Utility</p>
-        </div>
-
-        <div class="project-card" data-language="python" data-framework="none" data-year="2025" data-category="utility" data-people="solo" data-hackathon="none" data-title="Temperature Convertor">
-        <h3>Temperature Convertor</h3>
-        <p><strong>Language:</strong> Python</p>
-        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot</p>
-        <p><strong>Frameworks:</strong></p>
-        <p>A simple temperature convertor, which converts between Celsius & Fahrenheit. The inspiration behind it was me randomly watching a YouTube video, and surprised to hear 100 degrees, for it to then register that the creator is American, and they speak in Fahrenheit.</p>
-        <a href="https://github.com/rj-here/temperatureConvertor">Check it out!</a>
-        <p><strong>Category:</strong> Utility</p>
-        </div>
-
-        <div class="project-card" data-language="c" data-framework="none" data-year="2025" data-category="utility" data-people="solo" data-hackathon="none" data-title="Calculator">
-        <h3>Calculator</h3>
-        <p><strong>Language:</strong> C</p>
-        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot</p>
-        <p><strong>Frameworks:</strong></p>
-        <p>A simple calculator, which performs basic arithmetic operations. It was my first C program, and I built it to reiterate the fundamentals of C programming.</p>
-        <a href="https://github.com/rj-here/calculator">Check it out!</a>
-        <p><strong>Category:</strong> Utility</p>
-        </div>
-
-        <div class="project-card" data-language="javascript" data-framework="none" data-year="2025" data-category="uni" data-people="solo" data-hackathon="none" data-title="Some Economic Fun">
-        <h3>Some Economic Fun</h3>
-        <p><strong>Language:</strong> JavaScript</p>
-        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot, GitHub Pages</p>
-        <p><strong>Frameworks:</strong></p>
-        <p>I was keen to further enhance my understanding of prevoiusly learned web development fundamentals in the form of JavaScript, CSS & HTML. I wanted to explore a slightly different approach and aesthetic, as well as try and apply my learnings from my classes introducing microeconomics and macroeconomics.
-        The books for them are MicroEconomics for Life: Third Edition & MacroEconomics for Life: Third Edition, both by Avi J. Cohen & Scott A. Walla.
-        </p>
-        <a href="https://rj-here.github.io/someeconomicfun/">Check it out!</a>
-        <p><strong>Category:</strong> University Concepts</p>
-        </div>
-
-        <div class="project-card" data-language="javascript" data-framework="none" data-year="2025" data-category="uni" data-people="solo" data-hackathon="none" data-title="Should You or Should You Not?">
-        <h3>Should You or Should You Not?</h3>
-        <p><strong>Language:</strong> JavaScript</p>
-        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot, GitHub Pages</p>
-        <p><strong>Frameworks:</strong></p>
-        <p>A simple tool to help you make decisions, based on the points you have for and against making it. It is partly inspired from the concept of utilitarianism, which I learned in my ethics (philospohy) classes, PHIL 2070 & 2075.
-        The books for them are Everyday Ethics by Brian Huss, and Applied Ethics: An Impartial Introduction by Elizabeth Jackson, Tyron Goldscmidt, Dustin Crummett, and Rebecca Chan.    
-        </p>
-        <a href="https://rj-here.github.io/shouldyoushouldyounot/">Check it out!</a>
-        <p><strong>Category:</strong> University Concepts</p>
-        </div>
-
-        <div class="project-card" data-language="java" data-framework="none" data-year="2024" data-category="game" data-people="solo" data-hackathon="none" data-title="Snakes & Ladders">
-        <h3>Snakes & Ladders (Java)</h3>
-        <p><strong>Language:</strong> Java</p>
-        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot</p>
-        <p><strong>Frameworks:</strong></p>
-        <p>My first real "project". I made a simple Snakes & Ladders implementation, using Java. It is based off a personal board I have, and coded in a manner that considers the playing style I've grown up with.</p>
-        <a href="https://github.com/rj-here/snakes-and-ladders-JAVA">Check it out!</a>
-        <p><strong>Category:</strong> Games</p>
-        </div>
-
-        <div class="project-card" data-language="javascript" data-framework="none" data-year="2025" data-category="cricket" data-people="solo" data-hackathon="none" data-title="LBW - Little Bit Wiser in Cricket">
-        <h3>LBW - Little Bit Wiser in Cricket</h3>
-        <p><strong>Language:</strong> JavaScript</p>
-        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot, GitHub Pages</p>
-        <p><strong>Frameworks:</strong></p>
-        <p>A simple website involving some basic calculations related to cricket, for bowlers & batters. And, you can also get net run rate, a metric useful in tournament performance evaluation.</p>
-        <a href="https://rj-here.github.io/lbwincricket/">Check it out!</a>
-        <p><strong>Category:</strong> Cricket</p>
-        </div>
-
-        <div class="project-card" data-language="java" data-framework="none" data-year="2024" data-category="cricket" data-people="solo" data-hackathon="none" data-title="T20 World Cup Quiz">
-        <h3>T20 World Cup Quiz</h3>
-        <p><strong>Language:</strong> Java</p>
-        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot, Eclipse</p>
-        <p><strong>Frameworks:</strong></p>
-        <p>Another of my first few projects, this was a simple quiz game regarding some simple details of the T20 World Cup (previously known as World T20).
-        It covers all (senior) men's and women's editions from inaugral to most recent editions. Up next: 2026 women's edition (June-July).</p>
-        <a href="https://github.com/rj-here/T20WCQuiz">Check it out!</a>
-        <p><strong>Category:</strong> Cricket</p>
-        </div>
-
-        <div class="project-card" data-language="java" data-framework="none" data-year="2025" data-category="cricket" data-people="solo" data-hackathon="none" data-title="Net Run Rate Calculator">
-        <h3>Net Run Rate Calculator</h3>
-        <p><strong>Language:</strong> Java</p>
-        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot, Eclipse</p>
-        <p><strong>Frameworks:</strong></p>
-        <p>A simple tool to calculate net run rate in cricket, based on the runs scored and overs faced by a team. I had first cracked it here, and then implemented it in LBW.</p>
-        <a href="https://github.com/rj-here/NRR">Check it out!</a>
-        <p><strong>Category:</strong> Cricket</p>
-        </div>
-
-        <div class="project-card" data-language="java" data-framework="none" data-year="2025" data-category="cricket" data-people="solo" data-hackathon="none" data-title="DLS Calculator">
-        <h3>DLS Calculator</h3>
-        <p><strong>Language:</strong> Java</p>
-        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot, Eclipse</p>
-        <p><strong>Frameworks:</strong></p>
-        <p>This takes you to the Java file, where I (finally!) created a tool to determine the scores for the chasing team in rain-affected matches of cricket. This was mostly done before hand with fixes and touches done in the directory. This was a tougher project to do just due to the sheer involvement of numbers for this one, but I come out of completing this with immense satisfaction. Credit where due to GitHub Copilot!
-        One case is hidden due to computational errors which I cannot seem to figure out the issue of.
-        </p>
-        <a href="https://github.com/rj-here/DLS">Check it out!</a>
-        <p><strong>Category:</strong> Cricket</p>
-        </div>
-
-        <div class="project-card" data-language="java" data-framework="none" data-year="2025" data-category="cricket" data-people="solo" data-hackathon="none" data-title="ICC Tournament Points Database">
-        <h3>ICC Tournament Points Database</h3>
-        <p><strong>Language:</strong> Java</p>
-        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot, Eclipse</p>
-        <p><strong>Frameworks:</strong></p>
-        <p>This links to the Java file, considering all the big points (winners, runners-up, player of the tournament, player of the final) for all (senior) ICC tournaments conducted so far, so the ICC Women's & Men's Cricket World Cup, T20 World Cup (2026 editions under a year away), Champions Trophy (first women's T20 edition from 2027), and the World Test Championship for the men (2025-27 cycle ongoing).
-        A fun, yet demanding project, but I am glad to have it done. Lots of Wikipedia pages & ESPNCricinfo scorecards were referenced to get details correct (which I've tried to go over multiple times), and quite a bit of patience was the ask of the task.
-        Again, credit where due to GitHub Copilot. Up next, the T20 World Cups of 2026!
-        </p>
-        <a href="https://github.com/rj-here/ICC-tournaments">Check it out!</a>
-        <p><strong>Category:</strong> Cricket</p>
-        </div>
-
-        <div class="project-card" data-language="python" data-framework="none" data-year="2025" data-category="cricket" data-people="solo" data-hackathon="none" data-title="Playing XI">
-        <h3>Playing XI</h3>
-        <p><strong>Language:</strong> Python</p>
-        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot</p>
-        <p><strong>Frameworks:</strong></p>
-        <p>A simple terminal program to provide a playing XI for a cricket match, assigning the roles & leadership.</p>
-        <a href="https://github.com/rj-here/playing11Cricket">Check it out!</a>
-        <p><strong>Category:</strong> Cricket</p>
-        </div>
-
-        <div class="project-card" data-language="python" data-framework="none" data-year="2025" data-category="utility" data-people="team" data-hackathon="devops-genai-nov2025" data-title="Code Rush">
-        <h3>Code Rush</h3>
-        <p><strong>Language:</strong> Python</p>
-        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot</p>
-        <p><strong>Frameworks:</strong></p>
-        <p>A tool that would analyze a GitHub repository, and provide the main details such as owner, contributors, tech stack, purpose, and more.</p>
-        <a href="https://github.com/suraj9581/Code-Rush">Check it out!</a>
-        <p><strong>Category:</strong> Utility</p>
-        <p><strong>Collaborators:</strong> Ranjana Jindal, Surya Prakash Gangwar, Ramchandran Mani</p>
-        <p><strong>Hackathon:</strong> DevOps GenAI Hackathon Missisauga</p>
-        </div>
-        
-        <div class="project-card" data-language="markdown" data-framework="none" data-year="2026" data-category="utility" data-people="solo" data-hackathon="none" data-title="Endorsed Experiences">
-        <h3>Endorsed Experiences</h3>
-        <p><strong>Language: Markdown</strong></p>
-        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot, GitHub Pages</p>
-        <p><strong>Frameworks:</strong></p>
-        <p>It's a simple Markdown website where I'm sharing experiences I'd recommend to my friends. This just came to me randomly as an idea, so I thought why not?
-        It also means I've not got to remember every place I've been to, and can just add them here as I go along. It intentionally is low-key, because I want this to feel more like a simple note on the phone than a high-scale program which could overwhelm.
-        This is peak minimalism, and it feels good. No pressure, just places! Is there a place you'd recommend? I'm an email or LinkedIn message away! I have a large list of places to see, so as and when I see them, will I add them!
-        </p>
-        <a href="https://rj-here.github.io/endorsed-experiences/">Check it out!</a>
-        <p><strong>Category:</strong> Utility</p>
-        </div>
-
-        <div class="project-card" data-language="java" data-framework="none" data-year="2026" data-category="utility" data-people="solo" data-hackathon="none" data-title="Next Date Occurrence">
-        <h3>Next Date Occurrence</h3>
-        <p><strong>Language:</strong> Java</p>
-        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot</p>
-        <p><strong>Frameworks:</strong></p>
-        <p>This is a simple Java program which determines the next occurrence of a given date. It stems from a weird fascination for calendar dates.</p>
-        <a href="https://github.com/rj-here/nextDateOccurrence">Check it out!</a>
-        <p><strong>Category:</strong> Utility
-        </div>
-
-        <div class="project-card" data-language="c" data-framework="none" data-year="2026" data-category="game" data-people="solo" data-hackathon="none" data-title="Snakes & Ladders: Version 2">
-        <h3>Snakes & Ladders (C)</h3>
-        <p><strong>Language:</strong> C</p>
-        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot</p>
-        <p><strong>Frameworks:</strong></p>
-        <p>This is a simple C program that implements the classic Snakes and Ladders game. It's based on another personal board.</p>
-        <a href="https://github.com/rj-here/snakes-and-ladders-C">Check it out!</a>
-        <p><strong>Category:</strong> Game</p>
-        </div>
-        <div class="project-card" data-language="javascript" data-framework="none" data-year="2026" data-category="utility" data-people="solo" data-hackathon="none" data-title="Quick Mental Map">
-        <h3>Quick Mental Map</h3>
-        <p><strong>Languages:</strong>JavaScript</p>
-        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot</p>
-        <p>
-        My intetion was to implement React in a program. This, unfortunately, is not that! Maybe the next one.
-        However, it is a simple JavaScript program with a text box for one to quickly write down thoughts.
-        I often would write down: Class 1 notes, Class 2 notes, Class 3 task (assignment), and so on.
-        </p>
-        <a href="https://rj-here.github.io/quick-mental-map/">Check it out!</a>
-        <p><strong>Category:</strong> Utility</p>
-
         <!--
-        <div class="project-card" data-language="" data-framework="" data-year="2026" data-category="" data-people="" data-hackathon="ibm-z-sheridan-may2026" data-title="">
+        <div class="project-card" data-language="" data-framework="" data-year="2026" data-category="" data-people="" data-hackathon="ibmzsheridan-may2026" data-title="">
         <h3>Hackathon Project</h3>
         <p><strong>Languages:</strong></p>
         <p><strong>Tools:</strong>Visual Studio Code, GitHub Copilot</p>
@@ -280,13 +87,206 @@
         </div>
         -->
 
+        <div class="project-card" data-language="javascript" data-framework="none" data-year="2025" data-category="uni" data-people="solo" data-hackathon="none" data-title="Some Economic Fun">
+        <h3>Some Economic Fun</h3>
+        <p><strong>Language:</strong> JavaScript</p>
+        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot, GitHub Pages</p>
+        <p><strong>Description:</strong> I was keen to further enhance my understanding of prevoiusly learned web development fundamentals in the form of JavaScript, CSS & HTML. I wanted to explore a slightly different approach and aesthetic, as well as try and apply my learnings from my classes introducing microeconomics and macroeconomics.
+        The books for them are MicroEconomics for Life: Third Edition & MacroEconomics for Life: Third Edition, both by Avi J. Cohen & Scott A. Walla.
+        </p>
+        <a href="https://rj-here.github.io/someeconomicfun/">Check it out!</a>
+        <p><strong>Category:</strong> University Concepts</p>
+        </div>
+
+        <div class="project-card" data-language="javascript" data-framework="none" data-year="2025" data-category="uni" data-people="solo" data-hackathon="none" data-title="Should You or Should You Not?">
+        <h3>Should You or Should You Not?</h3>
+        <p><strong>Language:</strong> JavaScript</p>
+        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot, GitHub Pages</p>
+        <p><strong>Description:</strong> A simple tool to help you make decisions, based on the points you have for and against making it. It is partly inspired from the concept of utilitarianism, which I learned in my ethics (philospohy) classes, PHIL 2070 & 2075.
+        The books for them are Everyday Ethics by Brian Huss, and Applied Ethics: An Impartial Introduction by Elizabeth Jackson, Tyron Goldscmidt, Dustin Crummett, and Rebecca Chan.    
+        </p>
+        <a href="https://rj-here.github.io/shouldyoushouldyounot/">Check it out!</a>
+        <p><strong>Category:</strong> University Concepts</p>
+        </div>
+
+        <div class="project-card" data-language="javascript" data-framework="none" data-year="2026" data-category="utility" data-people="solo" data-hackathon="none" data-title="Quick Mental Map">
+        <h3>Quick Mental Map</h3>
+        <p><strong>Languages:</strong> JavaScript</p>
+        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot</p>
+        <p>
+        My intetion was to implement React in a program. This, unfortunately, is not that! Maybe the next one.
+        However, it is a simple JavaScript program with a text box for one to quickly write down thoughts.
+        I often would write down: Class 1 notes, Class 2 notes, Class 3 task (assignment), and so on.
+        </p>
+        <a href="https://rj-here.github.io/quick-mental-map/">Check it out!</a>
+        <p><strong>Category:</strong> Utility</p>
+        </div>
+
+        <div class="project-card" data-language="javascript" data-framework="none" data-year="2026" data-category="utility" data-people="solo" data-hackathon="none" data-title="A Simple Timer">
+        <h3>A Simple Timer</h3>
+        <p><strong>Languages:</strong> JavaScript</p>
+        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot</p>
+        <p>
+        This is a simple timer. You can start a timer, either from the presets, or input a custom one.
+        I built this to enhance my skills. Another simple JavaScript program, with GitHub Copilot helping on the final kick, after some web research.   
+        </p>
+        <a href="#">Check it out!</a>
+        <p><strong>Category:</strong> Utility</p>
+        </div>
+
+        <div class="project-card" data-language="python" data-framework="none" data-year="2025" data-category="utility" data-people="solo" data-hackathon="none" data-title="Trip Planner">
+        <h3>Trip Planner</h3>
+        <p><strong>Language:</strong> Python</p>
+        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot</p>
+        <p><strong>Description:</strong> A simple trip planner, based on my personal Notion template for planning trips. It asks simple questions such as the trip's length, budget, and the people accompanying. It formulated the start of my Python pyramid.</p>
+        <a href="https://github.com/rj-here/tripPlanner">Check it out!</a>
+        <p><strong>Category:</strong> Utility</p>
+        </div>
+
+        <div class="project-card" data-language="python" data-framework="none" data-year="2025" data-category="utility" data-people="solo" data-hackathon="none" data-title="Weekend Planner">
+        <h3>Weekend Planner</h3>
+        <p><strong>Language:</strong> Python</p>
+        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot</p>
+        <p><strong>Description:</strong> A simple weekend planner, was another idea that struck my mind. It asks simple questions such as the regular tasks, occasional tasks, and special things like a dinner out.</p>
+        <a href="https://github.com/rj-here/weekendPlanner">Check it out!</a>
+        <p><strong>Category:</strong> Utility</p>
+        </div>
+
+        <div class="project-card" data-language="python" data-framework="none" data-year="2025" data-category="utility" data-people="solo" data-hackathon="none" data-title="Temperature Convertor">
+        <h3>Temperature Convertor</h3>
+        <p><strong>Language:</strong> Python</p>
+        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot</p>
+        <p><strong>Description:</strong> A simple temperature convertor, which converts between Celsius & Fahrenheit. The inspiration behind it was me randomly watching a YouTube video, and surprised to hear 100 degrees, for it to then register that the creator is American, and they speak in Fahrenheit.</p>
+        <a href="https://github.com/rj-here/temperatureConvertor">Check it out!</a>
+        <p><strong>Category:</strong> Utility</p>
+        </div>
+
+        <div class="project-card" data-language="c" data-framework="none" data-year="2025" data-category="utility" data-people="solo" data-hackathon="none" data-title="Calculator">
+        <h3>Calculator</h3>
+        <p><strong>Language:</strong> C</p>
+        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot</p>
+        <p><strong>Description:</strong> A simple calculator, which performs basic arithmetic operations. It was my first C program, and I built it to reiterate the fundamentals of C programming.</p>
+        <a href="https://github.com/rj-here/calculator">Check it out!</a>
+        <p><strong>Category:</strong> Utility</p>
+        </div>
+
+        <div class="project-card" data-language="java" data-framework="none" data-year="2024" data-category="game" data-people="solo" data-hackathon="none" data-title="Snakes & Ladders">
+        <h3>Snakes & Ladders (Java)</h3>
+        <p><strong>Language:</strong> Java</p>
+        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot</p>
+        <p><strong>Description:</strong> My first real "project". I made a simple Snakes & Ladders implementation, using Java. It is based off a personal board I have, and coded in a manner that considers the playing style I've grown up with.</p>
+        <a href="https://github.com/rj-here/snakes-and-ladders-JAVA">Check it out!</a>
+        <p><strong>Category:</strong> Games</p>
+        </div>
+
+        <div class="project-card" data-language="javascript" data-framework="none" data-year="2025" data-category="cricket" data-people="solo" data-hackathon="none" data-title="LBW - Little Bit Wiser in Cricket">
+        <h3>LBW - Little Bit Wiser in Cricket</h3>
+        <p><strong>Language:</strong> JavaScript</p>
+        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot, GitHub Pages</p>
+        <p><strong>Description:</strong> A simple website involving some basic calculations related to cricket, for bowlers & batters. And, you can also get net run rate, a metric useful in tournament performance evaluation.</p>
+        <a href="https://rj-here.github.io/lbwincricket/">Check it out!</a>
+        <p><strong>Category:</strong> Cricket</p>
+        </div>
+
+        <div class="project-card" data-language="java" data-framework="none" data-year="2024" data-category="cricket" data-people="solo" data-hackathon="none" data-title="T20 World Cup Quiz">
+        <h3>T20 World Cup Quiz</h3>
+        <p><strong>Language:</strong> Java</p>
+        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot, Eclipse</p>
+        <p><strong>Description:</strong> Another of my first few projects, this was a simple quiz game regarding some simple details of the T20 World Cup (previously known as World T20).
+        It covers all (senior) men's and women's editions from inaugral to most recent editions. Up next: 2026 women's edition (June-July).</p>
+        <a href="https://github.com/rj-here/T20WCQuiz">Check it out!</a>
+        <p><strong>Category:</strong> Cricket</p>
+        </div>
+
+        <div class="project-card" data-language="java" data-framework="none" data-year="2025" data-category="cricket" data-people="solo" data-hackathon="none" data-title="Net Run Rate Calculator">
+        <h3>Net Run Rate Calculator</h3>
+        <p><strong>Language:</strong> Java</p>
+        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot, Eclipse</p>
+        <p><strong>Description:</strong> A simple tool to calculate net run rate in cricket, based on the runs scored and overs faced by a team. I had first cracked it here, and then implemented it in LBW.</p>
+        <a href="https://github.com/rj-here/NRR">Check it out!</a>
+        <p><strong>Category:</strong> Cricket</p>
+        </div>
+
+        <div class="project-card" data-language="java" data-framework="none" data-year="2025" data-category="cricket" data-people="solo" data-hackathon="none" data-title="DLS Calculator">
+        <h3>DLS Calculator</h3>
+        <p><strong>Language:</strong> Java</p>
+        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot, Eclipse</p>
+        <p><strong>Description:</strong> This takes you to the Java file, where I (finally!) created a tool to determine the scores for the chasing team in rain-affected matches of cricket. This was mostly done before hand with fixes and touches done in the directory. This was a tougher project to do just due to the sheer involvement of numbers for this one, but I come out of completing this with immense satisfaction. Credit where due to GitHub Copilot!
+        One case is hidden due to computational errors which I cannot seem to figure out the issue of.
+        </p>
+        <a href="https://github.com/rj-here/DLS">Check it out!</a>
+        <p><strong>Category:</strong> Cricket</p>
+        </div>
+
+        <div class="project-card" data-language="java" data-framework="none" data-year="2025" data-category="cricket" data-people="solo" data-hackathon="none" data-title="ICC Tournament Points Database">
+        <h3>ICC Tournament Points Database</h3>
+        <p><strong>Language:</strong> Java</p>
+        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot, Eclipse</p>
+        <p><strong>Description:</strong> This links to the Java file, considering all the big points (winners, runners-up, player of the tournament, player of the final) for all (senior) ICC tournaments conducted so far, so the ICC Women's & Men's Cricket World Cup, T20 World Cup (2026 editions under a year away), Champions Trophy (first women's T20 edition from 2027), and the World Test Championship for the men (2025-27 cycle ongoing).
+        A fun, yet demanding project, but I am glad to have it done. Lots of Wikipedia pages & ESPNCricinfo scorecards were referenced to get details correct (which I've tried to go over multiple times), and quite a bit of patience was the ask of the task.
+        Again, credit where due to GitHub Copilot. Up next, the T20 World Cups of 2026!
+        </p>
+        <a href="https://github.com/rj-here/ICC-tournaments">Check it out!</a>
+        <p><strong>Category:</strong> Cricket</p>
+        </div>
+
+        <div class="project-card" data-language="python" data-framework="none" data-year="2025" data-category="cricket" data-people="solo" data-hackathon="none" data-title="Playing XI">
+        <h3>Playing XI</h3>
+        <p><strong>Language:</strong> Python</p>
+        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot</p>
+        <p><strong>Description:</strong> A simple terminal program to provide a playing XI for a cricket match, assigning the roles & leadership.</p>
+        <a href="https://github.com/rj-here/playing11Cricket">Check it out!</a>
+        <p><strong>Category:</strong> Cricket</p>
+        </div>
+
+        <div class="project-card" data-language="python" data-framework="none" data-year="2025" data-category="utility" data-people="team" data-hackathon="devops-genai-nov2025" data-title="Code Rush">
+        <h3>Code Rush</h3>
+        <p><strong>Language:</strong> Python</p>
+        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot, Docker</p>
+        <p><strong>Description:</strong> A tool that would analyze a GitHub repository, and provide the main details such as owner, contributors, tech stack, purpose, and more.</p>
+        <a href="https://github.com/suraj9581/Code-Rush">Check it out!</a>
+        <p><strong>Category:</strong> Utility</p>
+        <p><strong>Collaborators:</strong> Ranjana Jindal, Surya Prakash Gangwar, Ramchandran Mani</p>
+        <p><strong>Hackathon:</strong> DevOps GenAI Hackathon Missisauga</p>
+        </div>
+        
+        <div class="project-card" data-language="markdown" data-framework="none" data-year="2026" data-category="utility" data-people="solo" data-hackathon="none" data-title="Endorsed Experiences">
+        <h3>Endorsed Experiences</h3>
+        <p><strong>Language: Markdown</strong></p>
+        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot, GitHub Pages</p>
+        <p><strong>Description:</strong> It's a simple Markdown website where I'm sharing experiences I'd recommend to my friends. This just came to me randomly as an idea, so I thought why not?
+        It also means I've not got to remember every place I've been to, and can just add them here as I go along. It intentionally is low-key, because I want this to feel more like a simple note on the phone than a high-scale program which could overwhelm.
+        This is peak minimalism, and it feels good. No pressure, just places! Is there a place you'd recommend? I'm an email or LinkedIn message away! I have a large list of places to see, so as and when I see them, will I add them!
+        </p>
+        <a href="https://rj-here.github.io/endorsed-experiences/">Check it out!</a>
+        <p><strong>Category:</strong> Utility</p>
+        </div>
+
+        <div class="project-card" data-language="java" data-framework="none" data-year="2026" data-category="utility" data-people="solo" data-hackathon="none" data-title="Next Date Occurrence">
+        <h3>Next Date Occurrence</h3>
+        <p><strong>Language:</strong> Java</p>
+        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot</p>
+        <p><strong>Description:</strong> This is a simple Java program which determines the next occurrence of a given date. It stems from a weird fascination for calendar dates.</p>
+        <a href="https://github.com/rj-here/nextDateOccurrence">Check it out!</a>
+        <p><strong>Category:</strong> Utility
+        </div>
+
+        <div class="project-card" data-language="c" data-framework="none" data-year="2026" data-category="game" data-people="solo" data-hackathon="none" data-title="Snakes & Ladders: Version 2">
+        <h3>Snakes & Ladders (C)</h3>
+        <p><strong>Language:</strong> C</p>
+        <p><strong>Tools:</strong> Visual Studio Code, GitHub Copilot</p>
+        <p><strong>Description:</strong> This is a simple C program that implements the classic Snakes and Ladders game. It's based on another personal board.</p>
+        <a href="https://github.com/rj-here/snakes-and-ladders-C">Check it out!</a>
+        <p><strong>Category:</strong> Game</p>
+        </div>
+
         <!--
         <div class="project-card" data-language="" data-framework="" data-year="" data-category="" data-people="" data-hackathon="" data-title="">
         <h3>Template (Name)</h3>
         <p><strong>Languages:</strong></p>
         <p><strong>Tools:</strong></p>
         <p><strong>Frameworks:</strong></p>
-        <p>Description of the project.</p>
+        <p><strong>Description:</strong></p>
         <a href="#">Check it out!</a>
         <p><strong>Category:</strong></p>
         <p><strong>Collaborator(s):</strong></p>

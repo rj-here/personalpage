@@ -60,16 +60,6 @@ else { //If isDeleting is true, that means we are deleting characters
 }
 setTimeout(typeWriter, isDeleting ? 100 : 200); //To set a timeout for the next character to be typed or deleted, depending on whether we are typing or deleting
 }
-//This part is for the light/dark mode toggle button
-function modeToggle() {
-    document.body.classList.toggle('dark-mode'); //To toggle the dark-mode class on the element
-    //To save the preference
-    if (document.body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark'); //Maintains dark mode
-    } else {
-        localStorage.setItem('theme', 'light'); //Maintains light mode
-    }
-}
 typeWriter(); //To start the typing effect
 //This will be for sorting & filtering projects
 function filterAndSort() {
@@ -82,7 +72,7 @@ function filterAndSort() {
     const peopleFilter = document.getElementById('filter-people').value; //people filter
     const hackathonFilter = document.getElementById('filter-hackathon').value; //hackathon filter
     const categoryFilter = document.getElementById('filter-category').value; //category filter
-    const frameworkFilter = document.getElementById('filter-framework'.value); //framework filter
+    const frameworkFilter = document.getElementById('filter-framework').value; // Fixed syntax error
     // Changes in the sort dropdown
     const sortOption = document.getElementById('sort').value;
 
@@ -106,9 +96,11 @@ function filterAndSort() {
         if (sortOption === 'title') {
             return a.dataset.title.localeCompare(b.dataset.title);
         } else if (sortOption === 'year') {
-            return b.dataset.year - a.dataset.year;
+            return Number(b.dataset.year) - Number(a.dataset.year); // Ensure numeric comparison
         } else if (sortOption === 'none') {
             return 0; // No sorting, keep the original order
+        } else {
+            return 0; // Default case
         }
     });
 
@@ -125,4 +117,6 @@ function filterAndSort() {
     }
 }
 
-
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode'); // Toggle the dark-mode class on the body element
+}
