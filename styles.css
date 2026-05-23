@@ -2,16 +2,15 @@
 General Style
 */
 head {
-    background-color: rgb(75, 189, 255);
+    /* For gradients: https://www.w3schools.com/css/css3_gradients.asp */
+    background-image: linear-gradient(180deg, rgb(0, 0, 0), rgb(0, 15, 77));
 }
 body {
-    background-color: rgb(75, 189, 255);
-}
-footer {
-    background-color: rgb(75, 189, 255);
+    background-image: linear-gradient(180deg, rgb(0, 0, 0), rgb(0, 15, 77));
+    
 }
 h1 {
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 70px;
     text-align: left;
     margin-top: 5px;
@@ -19,7 +18,7 @@ h1 {
     font-family: 'Arial', sans-serif;
 }
 h2 {
-    color: black;
+    color: rgb(255, 255, 255);
     text-align: center;
     font-size: 50px;
     text-align: left;
@@ -30,7 +29,7 @@ h2 {
     font-family: 'Arial', sans-serif;
 }
 h3 {
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 43px;
     text-align: left;
     margin-top: 5px;
@@ -40,7 +39,7 @@ h3 {
     font-family: 'Arial', sans-serif;
 }
 h4 {
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 36px;
     text-align: left;
     margin-top: 5px;
@@ -50,7 +49,7 @@ h4 {
     font-family: 'Arial', sans-serif;
 }
 h5 {   
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 29px;
     text-align: left;
     margin-top: 5px;
@@ -60,7 +59,7 @@ h5 {
     font-family: 'Arial', sans-serif;
 }
 h6 {
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 25px;
     text-align: left;
     margin-top: 5px;
@@ -70,7 +69,7 @@ h6 {
     font-family: 'Arial', sans-serif;
 }
 p {
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 19px;
     text-align: left;
     margin-top: 5px;
@@ -80,7 +79,6 @@ p {
     font-family: 'Arial', sans-serif;
 }
 a {
-    color: black;
     font-size: 15px;
     text-align: center;
     color: rgb(0, 0, 255);
@@ -96,7 +94,6 @@ strong {
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 button {
-    color:black;
     border: steelblue;
     background-color: rgb(0, 30, 255);
     color:white;
@@ -108,7 +105,7 @@ button {
     font-family: 'Arial', sans-serif;
 }
 li {
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 18px;
     text-align: right;
     font-size: 19px;
@@ -120,7 +117,7 @@ li {
     font-family: 'Roboto', sans-serif;
 }
 aside {
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 19px;
     text-align: left;
     margin-top: 5px;
@@ -131,7 +128,7 @@ aside {
     font-style: italic;
     font-weight: bolder;
     position: fixed;
-    background-color: rgb(54, 181, 255);
+    background-color: rgb(0, 4, 53);
     backdrop-filter: blur(10px); 
 }
 
@@ -148,7 +145,7 @@ aside nav ul li {
 
 aside nav ul li a {
     display: block;
-    color: #222;
+    color: #e0e0e0;
     font-size: 18px;
     font-family: 'Arial', sans-serif;
     font-weight: bold;
@@ -160,7 +157,7 @@ aside nav ul li a {
 
 aside nav ul li a.active,
 aside nav ul li a:hover {
-    background: #0074d9;
+    background: #00315b;
     color: #fff;
 }
 
@@ -172,7 +169,7 @@ aside nav ul li a:hover {
     left: auto;
     width: 200px;
     height: 100vh;
-    background: rgba(0, 174, 255, 0.7);
+    background: rgb(10, 0, 121);
     backdrop-filter: blur(10px);
     box-shadow: 2px 0 8px rgba(0,0,0,0.05);
     z-index: 1000;
@@ -290,7 +287,7 @@ aside nav ul li a:hover {
     height: auto; /* height */
     padding: 16px; /* Inner spacing */
     margin: 10px 0; /* Space between cards */
-    background-color: rgb(138, 210, 255); /* White background */
+    background-color: rgb(0, 6, 43); /* White background */
     transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
 }
 
@@ -302,19 +299,19 @@ aside nav ul li a:hover {
 .project-card h3 {
     margin-top: 0; /* Remove default margin */
     font-size: 1.5rem; /* Adjust heading size */
-    color: #0074d9; /* Accent color */
+    color: #00149a; /* Accent color */
 }
 
 .project-card p {
     font-size: 1rem; /* Adjust text size */
-    color: #333; /* Darker text color */
+    color: #c5c5c5; /* Darker text color */
 }
 
 .project-card a {
     display: inline-block; /* Make links block-like */
     margin-top: 8px; /* Space above link */
     padding: 8px 12px; /* Button-like padding */
-    background-color: #0074d9; /* Button background */
+    background-color: #00004b; /* Button background */
     color: #fff; /* White text */
     text-decoration: none; /* Remove underline */
     border-radius: 4px; /* Rounded corners */
@@ -322,26 +319,7 @@ aside nav ul li a:hover {
 }
 
 .project-card a:hover {
-    background-color: #005bb5; /* Darker blue on hover */
-}
-
-/* Dark Mode */
-body.dark-mode {
-    /* For gradients: https://www.w3schools.com/css/css3_gradients.asp */
-    background-image: linear-gradient(180deg, rgb(0, 0, 0), rgb(255, 0, 0));
-}
-h1.dark-mode, h2.dark-mode, h3.dark-mode, h4.dark-mode, h5.dark-mode, h6.dark-mode {
-    color: rgb(0, 30, 255);
-}
-a.dark-mode {
-    color: rgb(0, 179, 255);
-}
-p.dark-mode {
-    color: rgb(0, 30, 255);
-}
-button.dark-mode {
-    background-color: rgb(255, 255, 255);
-    color: white;
+    background-color: #000cb5; /* Darker blue on hover */
 }
 
 
