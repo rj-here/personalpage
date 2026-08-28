@@ -32,7 +32,7 @@ function menu() {
 }
 
 //This part is to get a typing effect on the homepage, because my friends have it, and I want it too!
-const roles = ["Software & Web Developer", "Computer Security Major", "Problem Solver", "Tech & Cricket Enthusiast"]; //What I want to be typed out!
+const roles = ["Software & Web Developer", "Computer Security Major", "Problem Solver", "Tech & Cricket Enthusiast", "Notion Buff"]; //What I want to be typed out!
 const typingElement = document.getElementById("typing-effect");
 let roleIndex = 0; //This tracks the current role being typed
 let charIndex = 0; //This tracks the current character being typed
